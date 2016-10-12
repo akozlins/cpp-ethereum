@@ -13,6 +13,11 @@ endif()
 
 set(CMAKE_AUTOMOC ON)
 
+set(BUNDLE cudaminer)
+set(COMPUTE 52)
+set(CMAKE_C_COMPILER /usr/bin/gcc-5)
+set(CMAKE_CXX_COMPILER /usr/bin/g++-5)
+
 # link_directories interprate relative paths with respect to CMAKE_CURRENT_SOURCE_DIR
 cmake_policy(SET CMP0015 NEW)
 

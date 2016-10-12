@@ -5,7 +5,8 @@ FIND_PACKAGE(CUDA REQUIRED)
 file(GLOB SRC_LIST "*.cpp" "*.cu")
 file(GLOB HEADERS "*.h" "*.cuh")
 
-set(CUDA_NVCC_FLAGS ${CUDA_NVCC_FLAGS};--disable-warnings;--ptxas-options=-v;-use_fast_math;-lineinfo)
+set(CUDA_NVCC_FLAGS ${CUDA_NVCC_FLAGS};--std=c++11;-Xcompiler -fPIC;--disable-warnings;--ptxas-options=-v;-use_fast_math;-lineinfo)
+SET(CUDA_PROPAGATE_HOST_FLAGS OFF)
 
 LIST(APPEND CUDA_NVCC_FLAGS_RELEASE -O3)
 LIST(APPEND CUDA_NVCC_FLAGS_DEBUG -G)

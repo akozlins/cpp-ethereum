@@ -14,7 +14,7 @@ set(EXECUTABLE devcore)
 
 file(GLOB HEADERS "*.h")
 
-add_library(${EXECUTABLE} ${SRC_LIST} ${HEADERS})
+add_library(${EXECUTABLE} STATIC ${SRC_LIST} ${HEADERS})
 
 target_link_libraries(${EXECUTABLE} ${Boost_THREAD_LIBRARIES})
 target_link_libraries(${EXECUTABLE} ${Boost_RANDOM_LIBRARIES})
